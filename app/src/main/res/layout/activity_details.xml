@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E5E5E5"
     tools:context=".DetailsActivity">
-//Hidup Muaz
+
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
