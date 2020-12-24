@@ -2,19 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:title="Account"
-        android:id="@+id/account"
-        android:enabled="true"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_account"/>
 
-    <item
-        android:title="Favourate"
-        android:id="@+id/heart"
-        android:enabled="true"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_heart"/>
+
     <item
         android:id="@+id/first_page"
         android:title="Home"
@@ -24,6 +13,8 @@
         android:id="@+id/second_page"
         android:title="Profile"
         android:icon="@drawable/ic_profile"/>
+
+
 
 
 </menu>
