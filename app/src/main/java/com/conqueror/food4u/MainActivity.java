@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         setAsiaRecycler(asiaFoodList);
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigation);
-        NavController navController =
+       
         bottomNav.setOnNavigationItemSelectedListener(navListener);
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
