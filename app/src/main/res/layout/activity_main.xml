@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
         android:fontFamily="@font/semibold"
-        android:text="Find\nFood near you"
+        android:text="Find\nFood Near You"
         android:textColor="#272677"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
