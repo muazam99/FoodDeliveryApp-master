@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new second_page();
                             break;
                     };
-                        getSupportFragmentManager().beginTransaction().replace(R.id.profile_nav,selectedFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
                         return true;
                 };
 
