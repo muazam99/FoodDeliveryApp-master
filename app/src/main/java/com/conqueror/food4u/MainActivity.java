@@ -11,8 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.conqueror.food4u.adapter.AsiaFoodAdapter;
+import com.conqueror.food4u.adapter.KekLapisAdapter;
 import com.conqueror.food4u.adapter.PopularFoodAdapter;
 import com.conqueror.food4u.model.AsiaFood;
+import com.conqueror.food4u.model.KekLapis;
 import com.conqueror.food4u.model.PopularFood;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -21,9 +23,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView popularRecycler, asiaRecycler;
+    RecyclerView popularRecycler, asiaRecycler, kekLapisRecycler;
     PopularFoodAdapter popularFoodAdapter;
     AsiaFoodAdapter asiaFoodAdapter;
+    KekLapisAdapter kekLapisAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +47,12 @@ public class MainActivity extends AppCompatActivity {
         List<AsiaFood> asiaFoodList = new ArrayList<>();
         asiaFoodList.add(new AsiaFood("Chicago Pizza", "RM20", R.drawable.asiafood1, "4.5", "Briand Restaurant"));
         asiaFoodList.add(new AsiaFood("Straberry Cake", "RM25", R.drawable.asiafood2, "4.2", "Friends Restaurant"));
-        asiaFoodList.add(new AsiaFood("Chicago Pizza", "RM20", R.drawable.asiafood1, "4.5", "Briand Restaurant"));
-        asiaFoodList.add(new AsiaFood("Straberry Cake", "RM25", R.drawable.asiafood2, "4.2", "Friends Restaurant"));
-        asiaFoodList.add(new AsiaFood("Chicago Pizza", "RM20", R.drawable.asiafood1, "4.5", "Briand Restaurant"));
-        asiaFoodList.add(new AsiaFood("Straberry Cake", "RM25", R.drawable.asiafood2, "4.2", "Friends Restaurant"));
+
+        setAsiaRecycler(asiaFoodList);
+
+        List<KekLapis> kekLapisList = new ArrayList<>();
+        kekLapisList.add(new KekLapis("Kek Lapis 3 Dara", "RM13", R.drawable.keklapis3dara, "4.5", "Afiq Restaurant"));
+        kekLapisList.add(new KekLapis("Straberry Cake", "RM25", R.drawable.asiafood2, "4.2", "Muaz Restaurant"));
 
         setAsiaRecycler(asiaFoodList);
 
@@ -97,7 +102,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void setKekLapisRecycler(List<KekLapis> kekLapisList) {
 
+        kekLapisRecycler = findViewById(R.id.kekLapis_recycler);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+        kekLapisRecycler.setLayoutManager(layoutManager);
+        kekLapisAdapter = new KekLapisAdapter(this, kekLapisList);
+        kekLapisRecycler.setAdapter(kekLapisAdapter);
+
+    }
 
     // Hi all,
     // Today we are going to build a food app.
