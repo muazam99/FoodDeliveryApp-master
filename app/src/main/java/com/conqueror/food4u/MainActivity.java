@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         List<KekLapis> kekLapisList = new ArrayList<>();
         kekLapisList.add(new KekLapis("Kek Lapis 3 Dara", "RM13", R.drawable.keklapis3dara, "4.5", "Afiq Restaurant"));
-        kekLapisList.add(new KekLapis("Straberry Cake", "RM25", R.drawable.asiafood2, "4.2", "Muaz Restaurant"));
+        kekLapisList.add(new KekLapis("Kek Lapis Asam Manis", "RM25", R.drawable.keklapisasammanis, "4.2", "Muaz Restaurant"));
 
         setKekLapisRecycler(kekLapisList);
 
