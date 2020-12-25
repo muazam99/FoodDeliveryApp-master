@@ -1,7 +1,9 @@
 package com.conqueror.food4u;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,6 +12,7 @@ import com.conqueror.food4u.adapter.AsiaFoodAdapter;
 import com.conqueror.food4u.adapter.PopularFoodAdapter;
 import com.conqueror.food4u.model.AsiaFood;
 import com.conqueror.food4u.model.PopularFood;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +52,16 @@ public class MainActivity extends AppCompatActivity {
 
         setAsiaRecycler(asiaFoodList);
 
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigation);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
     }
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    return false;
+                }
+            }
 
 
     private void setPopularRecycler(List<PopularFood> popularFoodList) {
@@ -71,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         asiaRecycler.setAdapter(asiaFoodAdapter);
 
     }
+
 
 
     // Hi all,
