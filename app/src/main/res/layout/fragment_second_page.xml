@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".second_page">
 
+    <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_bright"/>
+
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
@@ -16,5 +21,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
