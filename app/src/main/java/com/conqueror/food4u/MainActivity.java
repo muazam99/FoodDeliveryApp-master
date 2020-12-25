@@ -5,6 +5,7 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -59,9 +60,18 @@ public class MainActivity extends AppCompatActivity {
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    return false;
+                    Fragment selectedFragment = null;
+
+                    switch (item.getItemId()){
+                        case R.id.first_page:
+                            selectedFragment = new first_page();
+                            break;
+                        case R.id.second_page:
+                            selectedFragment = new second_page();
+                            break;
+                    }
                 }
-            }
+            };
 
 
     private void setPopularRecycler(List<PopularFood> popularFoodList) {
