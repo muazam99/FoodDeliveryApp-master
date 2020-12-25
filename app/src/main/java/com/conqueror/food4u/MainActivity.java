@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         // now here we will add some dummy data to out model class
 
         List<PopularFood> popularFoodList = new ArrayList<>();
-
+        popularFoodList.add(new PopularFood("Spicy Salty Egg Cornflake", "RM7.05", R.drawable.saltyegg));
         popularFoodList.add(new PopularFood("Float Cake Vietnam", "RM7.05", R.drawable.popularfood1));
         popularFoodList.add(new PopularFood("Chiken Drumstick", "RM17.05", R.drawable.popularfood2));
         popularFoodList.add(new PopularFood("Fish Tikka Stick", "RM25.05", R.drawable.popularfood3));
