@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         setAsiaRecycler(asiaFoodList);
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigation);
+        NavController navController =
         bottomNav.setOnNavigationItemSelectedListener(navListener);
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -59,15 +61,19 @@ public class MainActivity extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
 
-                    switch (item.getItemId()){
-                        case R.id.first_page:
+                    switch (item.getItemId()) {
+                        case R.id.nav_home:
                             selectedFragment = new first_page();
                             break;
-                        case R.id.second_page:
+                        case R.id.nav_profile:
                             selectedFragment = new second_page();
                             break;
-                    }
-                }
+                    };
+                        getSupportFragmentManager().beginTransaction().replace(R.id.profile_nav,selectedFragment).commit();
+                        return true;
+                };
+
+
             };
 
 
