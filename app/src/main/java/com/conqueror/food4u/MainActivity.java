@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         kekLapisList.add(new KekLapis("Kek Lapis 3 Dara", "RM13", R.drawable.keklapis3dara, "4.5", "Afiq Restaurant"));
         kekLapisList.add(new KekLapis("Straberry Cake", "RM25", R.drawable.asiafood2, "4.2", "Muaz Restaurant"));
 
-        setAsiaRecycler(asiaFoodList);
+        setKekLapisRecycler(kekLapisList);
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigation);
        
