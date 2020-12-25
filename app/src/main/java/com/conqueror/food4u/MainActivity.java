@@ -35,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
         popularFoodList.add(new PopularFood("Float Cake Vietnam", "RM7.05", R.drawable.popularfood1));
         popularFoodList.add(new PopularFood("Chiken Drumstick", "RM17.05", R.drawable.popularfood2));
         popularFoodList.add(new PopularFood("Fish Tikka Stick", "RM25.05", R.drawable.popularfood3));
-        popularFoodList.add(new PopularFood("Float Cake Vietnam", "RM7.05", R.drawable.popularfood1));
-        popularFoodList.add(new PopularFood("Chiken Drumstick", "RM17.05", R.drawable.popularfood2));
-        popularFoodList.add(new PopularFood("Fish Tikka Stick", "RM25.05", R.drawable.popularfood3));
 
         setPopularRecycler(popularFoodList);
 
